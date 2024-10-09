@@ -2,7 +2,7 @@
 """
 LLM Stream Workflow
 
-This script runs a Temporal workflow that streams responses from OpenAI's GPT model.
+This script runs a Temporal workflow that streams responses from OpenAI's GPT API.
 
 Example: poetry run python workflow.py "Give me a couple of paragraphs on the history of the Roman Empire."
 """
@@ -26,7 +26,7 @@ TIME_WINDOW = 1  # seconds
 
 @activity.defn
 async def stream_gpt(message: str) -> str:
-    """Stream responses from GPT model."""
+    """Stream responses from GPT API."""
     # Import OpenAI client inside the activity to avoid sandbox restrictions
     from openai import AsyncOpenAI
 
@@ -180,7 +180,7 @@ Note: Make sure to set your OpenAI API key as an environment variable:
   export OPENAI_API_KEY=your_api_key_here
 
 This script demonstrates a Temporal workflow that streams responses from 
-OpenAI's GPT model. It provides real-time updates as the model generates 
+OpenAI's GPT API. It provides real-time updates as the model generates 
 the response, and keeps the Temporal worker running for a short period 
 after completion to allow for potential queries.
         """,

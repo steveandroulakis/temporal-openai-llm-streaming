@@ -1,13 +1,13 @@
 # Temporal OpenAI LLM Streaming Workflow
 
-This Python script demonstrates a Temporal workflow that streams responses from OpenAI's GPT model.
+This Python script demonstrates a Temporal workflow that streams responses from OpenAI's GPT API.
 
 ![CLI Run Animation](cli.gif)
 
 ## How it Works
 
 1. The script starts a Temporal worker and executes a workflow.
-2. The workflow runs an activity that streams responses from the GPT model.
+2. The workflow runs an activity that streams responses from the GPT API.
 3. The activity sends chunks of the response back to the workflow using signals (every 1 second).
 4. The workflow accumulates these chunks and returns the final response.
 5. A query can be made to the workflow to get the response as it is being built.
