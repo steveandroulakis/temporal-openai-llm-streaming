@@ -38,10 +38,3 @@ coverage.xml
 # Logs and database
 *.log
 *.sqlite3
-
-# Images and design files (unless you want to track them)
-*.png
-*.jpg
-*.jpeg
-*.svg
-*.gif
